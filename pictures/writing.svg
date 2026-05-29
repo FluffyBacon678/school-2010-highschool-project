@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="עיפרון וכתיבה">
+  <rect width="400" height="300" fill="#f6f3ff"/>
+  <circle cx="200" cy="150" r="100" fill="#e6defb"/>
+  <g stroke="#5b21b6" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="120" y="96" width="120" height="150" rx="8" fill="#fff"/>
+    <line x1="138" y1="128" x2="206" y2="128"/>
+    <line x1="138" y1="150" x2="206" y2="150"/>
+    <line x1="138" y1="172" x2="190" y2="172"/>
+  </g>
+  <g stroke="#5b21b6" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M250 96 l34 34 -96 96 -44 10 10 -44 Z" fill="#8b5cf6"/>
+    <path d="M250 96 l34 34 -16 16 -34 -34 Z" fill="#c4b5fd"/>
+    <line x1="156" y1="230" x2="184" y2="221"/>
+  </g>
+</svg>

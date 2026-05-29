@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="לוח עם מספרים">
+  <rect width="400" height="300" fill="#ecfdf5"/>
+  <circle cx="200" cy="150" r="100" fill="#cdf3e0"/>
+  <g stroke="#065f46" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="104" y="92" width="192" height="130" rx="6" fill="#10b981"/>
+    <rect x="104" y="92" width="192" height="130" rx="6" fill="none"/>
+    <line x1="170" y1="222" x2="156" y2="244"/>
+    <line x1="230" y1="222" x2="244" y2="244"/>
+  </g>
+  <g fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold" font-size="34" text-anchor="middle">
+    <text x="150" y="146">7+3</text>
+    <text x="248" y="146">=10</text>
+    <text x="200" y="196">√ × ÷</text>
+  </g>
+</svg>

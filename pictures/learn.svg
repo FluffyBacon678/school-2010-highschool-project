@@ -1,0 +1,10 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="כובע סיום">
+  <rect width="400" height="300" fill="#eef2f8"/>
+  <circle cx="200" cy="150" r="100" fill="#d3deee"/>
+  <g stroke="#1e3a5f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M200 104 l96 38 -96 38 -96 -38 Z" fill="#2d5a8f"/>
+    <path d="M150 165 v40 c0 16 100 16 100 0 v-40" fill="#1e3a5f"/>
+    <line x1="296" y1="142" x2="296" y2="196"/>
+    <circle cx="296" cy="202" r="7" fill="#f59e0b" stroke="#1e3a5f"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ערימת ספרים">
+  <rect width="400" height="300" fill="#fef9ec"/>
+  <circle cx="200" cy="150" r="100" fill="#fdeccb"/>
+  <g stroke="#b45309" stroke-width="3" stroke-linejoin="round">
+    <rect x="118" y="196" width="164" height="28" rx="4" fill="#f59e0b"/>
+    <line x1="138" y1="196" x2="138" y2="224"/>
+    <rect x="128" y="168" width="150" height="28" rx="4" fill="#fbbf24"/>
+    <line x1="148" y1="168" x2="148" y2="196"/>
+    <rect x="112" y="140" width="158" height="28" rx="4" fill="#f59e0b"/>
+    <line x1="132" y1="140" x2="132" y2="168"/>
+  </g>
+  <g stroke="#b45309" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M196 140 v-44 a10 10 0 0 1 10-10 h44 v54" fill="#fff"/>
+    <line x1="206" y1="104" x2="240" y2="104"/>
+    <line x1="206" y1="116" x2="240" y2="116"/>
+  </g>
+</svg>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="גלריית איורים בנושא לקויות למידה.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>גלריה — לקויות למידה</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Lightbox */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.88);
+            z-index: 500;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+        .lightbox-overlay.open { display: flex; }
+        .lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 88vh;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            left: 24px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+            background: none;
+            border: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .lightbox-close:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="site-title">לקויות למידה</a>
+            <nav>
+                <a href="index.html">דף ראשי</a>
+                <a href="adhd.html">הפרעות קשב</a>
+                <a href="dyslexia.html">דיסלקציה</a>
+                <a href="dysgraphia.html">דיסגרפיה</a>
+                <a href="dyscalculia.html">דיסקלקוליה</a>
+                <a href="gallery.html" class="active">גלריה</a>
+                <a href="links.html">לינקים</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header dyslexia">
+            <span class="badge">Gallery</span>
+            <h1>גלריה</h1>
+            <p class="intro">תמונות ואיורים הקשורים לנושא לקויות הלמידה. לחצו על תמונה להגדלה.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>תמונות</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('pictures/study.svg')">
+                    <img src="pictures/study.svg" alt="ספרים ולמידה" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('pictures/reading.svg')">
+                    <img src="pictures/reading.svg" alt="קריאה" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('pictures/writing.svg')">
+                    <img src="pictures/writing.svg" alt="כתיבה" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('pictures/math.svg')">
+                    <img src="pictures/math.svg" alt="חשבון ומספרים" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('pictures/focus.svg')">
+                    <img src="pictures/focus.svg" alt="קשב וריכוז" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('pictures/learn.svg')">
+                    <img src="pictures/learn.svg" alt="הצלחה בלימודים" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <div class="related-topics">
+            <h3>נושאים קשורים</h3>
+            <div class="related-grid">
+                <a href="adhd.html" class="related-card">🧠 הפרעות קשב / ריכוז</a>
+                <a href="dyslexia.html" class="related-card">📖 דיסלקציה</a>
+                <a href="dysgraphia.html" class="related-card">✏️ דיסגרפיה</a>
+                <a href="dyscalculia.html" class="related-card">🔢 דיסקלקוליה</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <p>אתר מידע על לקויות למידה &mdash; נבנה מחדש</p>
+    </footer>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('open');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.getElementById('lightbox-img').src = '';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+</body>
+</html>

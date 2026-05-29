@@ -1,0 +1,13 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ריכוז ורעיון">
+  <rect width="400" height="300" fill="#fff7ed"/>
+  <circle cx="200" cy="150" r="100" fill="#fde4c8"/>
+  <g stroke="#9a3412" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M150 200 C110 196 104 150 120 132 C128 100 176 92 198 112 C236 104 260 140 244 168 C250 196 220 210 196 202 Z" fill="#fff"/>
+    <path d="M196 150 a18 18 0 1 1 -0.1 0" fill="#f59e0b"/>
+  </g>
+  <g stroke="#f59e0b" stroke-width="4" stroke-linecap="round">
+    <line x1="300" y1="96" x2="320" y2="80"/>
+    <line x1="312" y1="120" x2="336" y2="112"/>
+    <line x1="300" y1="146" x2="322" y2="150"/>
+  </g>
+</svg>

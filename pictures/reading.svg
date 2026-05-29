@@ -1,0 +1,17 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ספר פתוח">
+  <rect width="400" height="300" fill="#eff5ff"/>
+  <circle cx="200" cy="150" r="100" fill="#d6e6ff"/>
+  <g stroke="#1e40af" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M200 110 C170 92 130 92 108 102 V196 C130 186 170 186 200 204 Z" fill="#fff"/>
+    <path d="M200 110 C230 92 270 92 292 102 V196 C270 186 230 186 200 204 Z" fill="#bfdbfe"/>
+    <line x1="200" y1="110" x2="200" y2="204"/>
+    <g stroke="#3b82f6" stroke-width="2.5">
+      <line x1="124" y1="120" x2="184" y2="128"/>
+      <line x1="124" y1="138" x2="184" y2="146"/>
+      <line x1="124" y1="156" x2="184" y2="164"/>
+      <line x1="216" y1="128" x2="276" y2="120"/>
+      <line x1="216" y1="146" x2="276" y2="138"/>
+      <line x1="216" y1="164" x2="276" y2="156"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1e3a5f;
+    --accent-adhd: #f59e0b;
+    --accent-dyslexia: #3b82f6;
+    --accent-dysgraphia: #8b5cf6;
+    --accent-dyscalculia: #10b981;
+    --bg: #f0f4f8;
+    --surface: #ffffff;
+    --text: #1a202c;
+    --text-secondary: #4a5568;
+    --border: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
+    --radius: 12px;
+    --radius-sm: 8px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    direction: rtl;
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Header / Nav ── */
+header {
+    background: var(--primary);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    height: 64px;
+}
+
+.site-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: white;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+nav {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+nav a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem;
+    transition: background 0.18s, color 0.18s;
+}
+
+nav a:hover,
+nav a.active {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+/* ── Main ── */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    flex: 1;
+    width: 100%;
+}
+
+/* ── Hero (home page) ── */
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #2d5a8f 100%);
+    color: white;
+    border-radius: var(--radius);
+    padding: 52px 48px;
+    margin-bottom: 36px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 220px; height: 220px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -90px; right: -40px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.25;
+    position: relative;
+}
+
+.hero p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    max-width: 720px;
+    line-height: 1.9;
+    position: relative;
+}
+
+/* ── Section heading (home) ── */
+.section-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+/* ── Cards grid ── */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    border-top: 4px solid;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.card.adhd        { border-top-color: var(--accent-adhd); }
+.card.dyslexia    { border-top-color: var(--accent-dyslexia); }
+.card.dysgraphia  { border-top-color: var(--accent-dysgraphia); }
+.card.dyscalculia { border-top-color: var(--accent-dyscalculia); }
+
+.card-icon { font-size: 2rem; line-height: 1; }
+
+.card h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    line-height: 1.65;
+    flex: 1;
+}
+
+.card-arrow {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+}
+
+/* ── Page header (inner pages) ── */
+.page-header {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 40px 40px 32px;
+    margin-bottom: 20px;
+    border-right: 5px solid;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    border-right: 5px solid;
+}
+
+.page-header.adhd        { border-right-color: var(--accent-adhd); }
+.page-header.dyslexia    { border-right-color: var(--accent-dyslexia); }
+.page-header.dysgraphia  { border-right-color: var(--accent-dysgraphia); }
+.page-header.dyscalculia { border-right-color: var(--accent-dyscalculia); }
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.adhd .badge        { background: #fef3c7; color: #92400e; }
+.dyslexia .badge    { background: #dbeafe; color: #1e3a8a; }
+.dysgraphia .badge  { background: #ede9fe; color: #4c1d95; }
+.dyscalculia .badge { background: #d1fae5; color: #064e3b; }
+
+.page-header h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+
+.page-header .intro {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+/* ── Content sections ── */
+.content-section {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 32px 40px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.content-section h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+}
+
+.content-section p {
+    margin-bottom: 14px;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+.content-section p:last-child { margin-bottom: 0; }
+
+/* ── Criteria list ── */
+.criteria-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.criteria-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 16px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.criteria-list .num {
+    min-width: 28px;
+    height: 28px;
+    background: var(--accent-adhd);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.82rem;
+    flex-shrink: 0;
+}
+
+/* ── Footer ── */
+footer {
+    background: var(--primary);
+    color: rgba(255,255,255,0.65);
+    text-align: center;
+    padding: 22px;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+/* ── Callout boxes ── */
+.callout {
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    margin: 18px 0 4px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    font-size: 0.93rem;
+    line-height: 1.75;
+}
+
+.callout-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 2px; }
+
+.callout.info    { background: #eff6ff; border-right: 3px solid var(--accent-dyslexia); color: #1e3a8a; }
+.callout.tip     { background: #f0fdf4; border-right: 3px solid var(--accent-dyscalculia); color: #065f46; }
+.callout.fact    { background: #fef9c3; border-right: 3px solid var(--accent-adhd); color: #78350f; }
+.callout.purple  { background: #f5f3ff; border-right: 3px solid var(--accent-dysgraphia); color: #4c1d95; }
+
+/* ── Related topics ── */
+.related-topics {
+    margin-top: 28px;
+}
+
+.related-topics h3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 12px;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 10px;
+}
+
+.related-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.88rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.18s, border-color 0.18s, color 0.18s;
+}
+
+.related-card:hover {
+    background: #eff6ff;
+    border-color: var(--accent-dyslexia);
+    color: var(--primary);
+}
+
+/* ── Gallery grid ── */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.gallery-item {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img { transform: scale(1.05); }
+
+/* ── Resource list ── */
+.resource-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.resource-list li a {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 18px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.93rem;
+    border: 1px solid var(--border);
+    transition: background 0.18s, border-color 0.18s;
+    gap: 3px;
+}
+
+.resource-list li a:hover {
+    background: #eff6ff;
+    border-color: var(--accent-dyslexia);
+}
+
+.resource-list .resource-desc {
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+}
+
+.resource-tag {
+    display: inline-block;
+    background: var(--border);
+    color: var(--text-secondary);
+    border-radius: 99px;
+    padding: 2px 9px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    align-self: flex-start;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        height: auto;
+        padding: 14px 16px;
+        gap: 10px;
+    }
+    nav { justify-content: center; }
+    .hero { padding: 32px 24px; }
+    .hero h1 { font-size: 1.9rem; }
+    .page-header,
+    .content-section { padding: 24px 20px; }
+    main { padding: 24px 16px; }
+    .cards-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+    .cards-grid { grid-template-columns: 1fr; }
+}
